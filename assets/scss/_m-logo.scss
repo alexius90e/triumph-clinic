@@ -1,0 +1,42 @@
+.logo {
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 35px;
+      height: auto;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &-name {
+      font-weight: 600;
+      font-size: 26px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $black;
+    }
+
+    &-slogan {
+      font-weight: 400;
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $grey;
+    }
+  }
+}

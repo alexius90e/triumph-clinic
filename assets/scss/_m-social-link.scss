@@ -1,0 +1,35 @@
+.social-link {
+  display: inline-block;
+  height: 29px;
+  width: 29px;
+  border-radius: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--whatsapp {
+    background-image: url(../img/icons/whatsapp.svg);
+    background-color: #2aa81a;
+
+    &:active {
+      background-color: #42d030;
+    }
+  }
+
+  &--tg {
+    background-image: url(../img/icons/telegram.svg);
+    background-color: #178ec9;
+
+    &:active {
+      background-color: #45b3ea;
+    }
+  }
+
+  &--phone {
+    width: auto;
+    height: auto;
+    margin-left: 17px;
+    font-weight: 600;
+    font-size: 24px;
+    color: $black;
+  }
+}
