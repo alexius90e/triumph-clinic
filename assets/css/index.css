@@ -1,6 +1,48 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.eot");
+  src: local("Gilroy Light"), local("Gilroy-Light"), url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-RegularItalic.eot");
+  src: local("Gilroy Regular Italic"), local("Gilroy-RegularItalic"), url("../fonts/Gilroy-RegularItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-RegularItalic.woff") format("woff"), url("../fonts/Gilroy-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-SemiBold.eot");
+  src: local("Gilroy SemiBold"), local("Gilroy-SemiBold"), url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff") format("woff"), url("../fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 html {
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
@@ -18,7 +60,7 @@ a,
 button,
 input,
 textarea {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Gilroy", sans-serif;
   text-decoration: none;
 }
 
@@ -49,10 +91,18 @@ img {
   box-sizing: border-box;
 }
 
+.logo {
+  flex: 0 0 auto;
+}
 .logo__link {
   display: flex;
   align-items: center;
   gap: 22px;
+}
+@media (max-width: 1240px) {
+  .logo__link {
+    gap: 16px;
+  }
 }
 .logo__figure {
   display: flex;
@@ -64,6 +114,11 @@ img {
   max-width: 100%;
   width: 35px;
   height: auto;
+}
+@media (max-width: 992px) {
+  .logo__figure-image {
+    width: 25px;
+  }
 }
 .logo__text {
   display: flex;
@@ -77,12 +132,24 @@ img {
   text-transform: uppercase;
   color: #2d2d2d;
 }
+@media (max-width: 992px) {
+  .logo__text-name {
+    font-weight: 600;
+    font-size: 19px;
+  }
+}
 .logo__text-slogan {
   font-weight: 400;
   font-size: 9px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #878787;
+}
+@media (max-width: 992px) {
+  .logo__text-slogan {
+    font-weight: 400;
+    font-size: 7px;
+  }
 }
 
 .social-link {
@@ -92,6 +159,12 @@ img {
   border-radius: 32px;
   background-position: center;
   background-repeat: no-repeat;
+}
+@media (max-width: 992px) {
+  .social-link {
+    height: 23px;
+    width: 23px;
+  }
 }
 .social-link--whatsapp {
   background-image: url(../img/icons/whatsapp.svg);
@@ -110,10 +183,32 @@ img {
 .social-link--phone {
   width: auto;
   height: auto;
-  margin-left: 17px;
   font-weight: 600;
   font-size: 24px;
   color: #2d2d2d;
+}
+@media (max-width: 1240px) {
+  .social-link--phone {
+    font-size: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .social-link--phone {
+    background-color: #609eff;
+    background-image: url(../img/icons/phone.svg);
+    height: 23px;
+    width: 23px;
+  }
+}
+@media (max-width: 992px) {
+  .social-link--phone:active {
+    background-color: #3081ff;
+  }
+}
+@media (max-width: 992px) {
+  .social-link--phone > * {
+    display: none;
+  }
 }
 
 .button {
@@ -125,14 +220,29 @@ img {
 .button--order {
   display: inline-block;
   padding: 14px 29px;
+  color: #878787;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.01em;
   border: 1px solid #cacaca;
 }
+.button--order:hover {
+  color: #ffffff;
+  border-color: #609eff;
+  background-color: #609eff;
+}
+.button--order:active {
+  border-color: #3081ff;
+  background-color: #3081ff;
+}
 
 .header {
   padding: 26px 0 29px;
+}
+@media (max-width: 992px) {
+  .header {
+    padding: 17px 0 20px;
+  }
 }
 .header .container {
   display: flex;
@@ -140,18 +250,84 @@ img {
   justify-content: space-between;
   gap: 24px;
 }
+@media (max-width: 992px) {
+  .header .container {
+    gap: 16px;
+  }
+}
 .header__nav {
   display: flex;
   align-items: center;
   gap: 36px;
   padding: 0 30px 0 35px;
 }
+@media (max-width: 1240px) {
+  .header__nav {
+    flex: 1 1 auto;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 0;
+  }
+}
+@media (max-width: 992px) {
+  .header__nav {
+    display: none;
+  }
+}
 .header__nav-link {
   font-weight: 400;
   font-size: 15px;
+}
+@media (max-width: 1240px) {
+  .header__nav-link {
+    font-size: 14px;
+  }
 }
 .header__social {
   display: flex;
   align-items: center;
   gap: 17px;
+}
+@media (max-width: 992px) {
+  .header__social {
+    gap: 13px;
+  }
+}
+.header__social .social-link--phone {
+  margin-left: 17px;
+}
+@media (max-width: 1240px) {
+  .header__social .social-link--phone {
+    margin-left: 0;
+  }
+}
+.header__buttons {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+@media (max-width: 576px) {
+  .header__buttons .button--order {
+    display: none;
+  }
+}
+.header__burger {
+  display: none;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 30px;
+  background: url(../img/icons/burger.svg) center no-repeat;
+  background-color: #609eff;
+  transition: all ease-in-out 0.1s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .header__burger {
+    display: inline-block;
+    background-color: #609eff;
+  }
+}
+.header__burger:active {
+  background-color: #3081ff;
 }

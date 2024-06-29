@@ -1,8 +1,14 @@
 .logo {
+  flex: 0 0 auto;
+
   &__link {
     display: flex;
     align-items: center;
     gap: 22px;
+
+    @include desktop {
+      gap: 16px;
+    }
   }
 
   &__figure {
@@ -15,6 +21,10 @@
       max-width: 100%;
       width: 35px;
       height: auto;
+
+      @include laptop {
+        width: 25px;
+      }
     }
   }
 
@@ -29,6 +39,11 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: $black;
+
+      @include laptop {
+        font-weight: 600;
+        font-size: 19px;
+      }
     }
 
     &-slogan {
@@ -37,6 +52,11 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: $grey;
+
+      @include laptop {
+        font-weight: 400;
+        font-size: 7px;
+      }
     }
   }
 }
