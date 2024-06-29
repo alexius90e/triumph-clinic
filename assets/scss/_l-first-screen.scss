@@ -1,0 +1,144 @@
+.first-screen {
+  & .container {
+    @include desktop {
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    padding: 43px 26px 55px;
+    border-radius: 80px 12px;
+    background-color: $blue;
+
+    @include laptop {
+      border-radius: 40px 7px;
+    }
+
+    & > * {
+      max-width: 996px;
+      margin: 0 auto;
+    }
+
+    & > .tag {
+      @include mobile {
+        margin: 0 32px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    margin-top: 13px;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 114%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $white;
+
+    @include desktop {
+      font-size: 72px;
+    }
+
+    @include laptop {
+      font-size: 56px;
+    }
+
+    @include tablet {
+      margin-bottom: 23px;
+      font-size: 39px;
+    }
+
+    & > b {
+      font-weight: 700;
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    margin-bottom: 34px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 24px;
+      padding: 0 32px;
+      margin-bottom: 24px;
+    }
+
+    &-item {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0 60px;
+      box-sizing: border-box;
+      border-right: 1px solid rgba($color: $white, $alpha: 0.2);
+
+      @include laptop {
+        gap: 10px;
+        padding: 0 32px;
+      }
+
+      @include tablet {
+        padding: 0;
+        border: none;
+      }
+
+      &:last-child {
+        border: none;
+      }
+
+      &-figure {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 60px;
+
+        @include laptop {
+          height: 50px;
+        }
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          height: auto;
+
+          @include laptop {
+            max-height: 48px;
+          }
+        }
+      }
+
+      &-text {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 138%;
+        text-align: center;
+        color: #fff;
+
+        @include laptop {
+          font-size: 18px;
+          line-height: 161%;
+        }
+
+        & > b {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+
+    & > .button {
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+}

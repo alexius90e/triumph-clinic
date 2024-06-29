@@ -1,8 +1,90 @@
 .button {
+  box-sizing: border-box;
   border-radius: 100px;
-  background-color: $white;
+  background-color: rgba($color: $white, $alpha: 0);
   transition: all ease-in-out 0.1s;
   cursor: pointer;
+
+  &--lg {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 58px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    text-align: center;
+
+    @include tablet {
+      justify-content: center;
+      gap: 20px;
+      max-width: 480px;
+      padding: 21px 30px;
+      font-size: 18px;
+    }
+
+    &::before {
+      transition: all ease-in-out 0.1s;
+    }
+
+    &--consult {
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        background: url(../img/icons/consultation.svg) center no-repeat;
+      }
+    }
+
+    &--coin {
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        background: url(../img/icons/ruble.svg) center no-repeat;
+      }
+    }
+  }
+
+  &--light {
+    color: $black;
+    background-color: $white;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:active {
+      color: $darkblue;
+    }
+
+    
+  }
+
+  &--dark {
+    color: $white;
+    border-color: rgba($color: $white, $alpha: 0.3);
+
+    &:hover {
+      color: $blue;
+      background-color: $white;
+    }
+
+    &:active {
+      color: $darkblue;
+    }
+
+    &::before {
+      filter: brightness(10);
+    }
+
+    &:hover::before, &:active::before {
+      filter: brightness(1);
+    }
+  }
 
   &--order {
     display: inline-block;

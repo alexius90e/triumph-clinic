@@ -1,0 +1,38 @@
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: fit-content;
+  padding: 19px 46px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 122%;
+  color: $grey;
+  border: 1px solid rgba($color: $grey, $alpha: 0.2);
+  border-radius: 240px;
+
+  @include tablet {
+    gap: 10px;
+    padding: 13px 26px;
+    font-size: 14px;
+  }
+
+  &::before {
+    content: '';
+    flex: 0 0 auto;
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+    background-color: $blue;
+  }
+
+  &--light {
+    color: $white;
+    border-color: rgba($color: $white, $alpha: 0.2);
+
+    &::before {
+      background-color: white;
+    }
+  }
+}
