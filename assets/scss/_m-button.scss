@@ -60,8 +60,6 @@
     &:active {
       color: $darkblue;
     }
-
-    
   }
 
   &--dark {
@@ -81,7 +79,8 @@
       filter: brightness(10);
     }
 
-    &:hover::before, &:active::before {
+    &:hover::before,
+    &:active::before {
       filter: brightness(1);
     }
   }
@@ -105,5 +104,31 @@
       border-color: $darkblue;
       background-color: $darkblue;
     }
+  }
+
+  &--prev,
+  &--next {
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 30px;
+    background: url(../img/icons/prev.svg) center no-repeat;
+    background-color: $blue;
+    transition: background-color ease-in-out 0.1s;
+    cursor: pointer;
+
+    @include laptop {
+      height: 42px;
+      width: 42px;
+      background-size: 8px;
+    }
+
+    &:active {
+      background-color: $darkblue;
+    }
+  }
+
+  &--next {
+    transform: rotate(180deg);
   }
 }

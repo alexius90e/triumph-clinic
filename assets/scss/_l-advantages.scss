@@ -1,6 +1,10 @@
 .advantages {
   margin: 51px 0 116px;
 
+  @include tablet {
+    margin: 15px 0 90px;
+  }
+
   & .container {
     display: flex;
     flex-wrap: wrap;
