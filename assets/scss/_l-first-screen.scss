@@ -8,6 +8,7 @@
   &__wrapper {
     padding: 43px 26px 55px;
     border-radius: 80px 12px;
+    background: url(../img/grid.svg) center no-repeat;
     background-color: $blue;
 
     @include laptop {

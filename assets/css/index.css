@@ -507,6 +507,7 @@ h3 {
 .first-screen__wrapper {
   padding: 43px 26px 55px;
   border-radius: 80px 12px;
+  background: url(../img/grid.svg) center no-repeat;
   background-color: #609eff;
 }
 @media (max-width: 992px) {
@@ -935,4 +936,28 @@ h3 {
   .facts__slider-controls {
     display: flex;
   }
+}
+
+.reviews {
+  margin: 100px 0 98px;
+}
+@media (max-width: 768px) {
+  .reviews {
+    margin: 77px 0 92px;
+  }
+}
+.reviews__title {
+  margin: 18px 0 21px;
+}
+@media (max-width: 768px) {
+  .reviews__title {
+    margin: 21px 0 23px;
+  }
+}
+.reviews__slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 61px 0 0;
 }

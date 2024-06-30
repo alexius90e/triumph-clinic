@@ -1,0 +1,23 @@
+.reviews {
+  margin: 100px 0 98px;
+
+  @include tablet {
+    margin: 77px 0 92px;
+  }
+
+  &__title {
+    margin: 18px 0 21px;
+
+    @include tablet {
+      margin: 21px 0 23px;
+    }
+  }
+
+  &__slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 61px 0 0;
+  }
+}
