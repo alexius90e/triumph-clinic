@@ -1,0 +1,89 @@
+.twelve-steps {
+  margin: 93px 0 111px;
+
+  @include tablet {
+    margin: 60px 0 75px;
+  }
+
+  &__title {
+    margin: 21px 0 31px;
+
+    @include tablet {
+      margin: 21px 0 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    @include desktop {
+      gap: 24px;
+    }
+
+    @include mobile {
+      gap: 12px;
+    }
+  }
+
+  &__step {
+    flex: 0 0 calc(100% / 4 - 50px / 4 * 3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include desktop {
+      flex: 0 0 calc(100% / 4 - 24px / 4 * 3);
+    }
+
+    @include laptop {
+      flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+    }
+
+    @include tablet {
+      flex: 0 0 calc(100% / 2 - 24px / 2);
+      align-items: center;
+    }
+
+    @include mobile {
+      flex: 1 1 100%;
+    }
+
+    &-number {
+      width: fit-content;
+      margin: 0 0 17px;
+      padding: 8px 16px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 127%;
+      text-align: center;
+      color: $white;
+      border-radius: 100px;
+      background-color: $blue;
+    }
+
+    &-title {
+      margin: 0 0 11px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 127%;
+      color: $darkgrey;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 146%;
+      color: $grey;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+}
