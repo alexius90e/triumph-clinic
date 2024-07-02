@@ -45,3 +45,32 @@ window.addEventListener('load', function () {
 window.addEventListener('resize', function () {
   swiperMode();
 });
+
+
+const reviewsSwiper = new Swiper('.reviews .swiper', {
+  slidesPerView: 1,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 30,
+    },
+    480: {
+      slidesPerView: 1.3,
+    },
+    576: {
+      slidesPerView: 1.5,
+    },
+    768: {
+      spaceBetween: 30,
+      slidesPerView: 2,
+    },
+    992: {
+      spaceBetween: 35,
+      slidesPerView: 2.5,
+    },
+  },
+  navigation: {
+    nextEl: '.reviews .button--next',
+    prevEl: '.reviews .button--prev',
+  },
+});

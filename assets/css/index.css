@@ -85,7 +85,7 @@ img {
 
 h2 {
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 55px;
   line-height: 122%;
   letter-spacing: 0.01em;
@@ -93,6 +93,7 @@ h2 {
   text-align: center;
 }
 h2 > span {
+  font-weight: 700;
   color: #609eff;
 }
 @media (max-width: 992px) {
@@ -307,6 +308,7 @@ h3 {
   color: #3081ff;
 }
 .button--dark {
+  background-color: #609eff;
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.3);
 }
@@ -940,6 +942,7 @@ h3 {
 
 .reviews {
   margin: 100px 0 98px;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .reviews {
@@ -954,10 +957,147 @@ h3 {
     margin: 21px 0 23px;
   }
 }
+.reviews__slider .swiper {
+  overflow: visible;
+}
+.reviews__slide {
+  padding: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px 40px;
+  background-color: #ffffff;
+}
+@media (max-width: 992px) {
+  .reviews__slide {
+    padding: 19px;
+  }
+}
+.reviews__slide-video {
+  height: 205px;
+  margin: 0 0 15px;
+  overflow: hidden;
+  border-radius: 10px 40px;
+  background-color: #609eff;
+}
+@media (max-width: 992px) {
+  .reviews__slide-video {
+    height: 160px;
+  }
+}
+@media (max-width: 768px) {
+  .reviews__slide-video {
+    height: 136px;
+  }
+}
+.reviews__slide-video > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.reviews__slide-name {
+  margin: 0 0 8px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 146%;
+  color: #4d4d4d;
+}
+@media (max-width: 768px) {
+  .reviews__slide-name {
+    font-size: 20px;
+  }
+}
+.reviews__slide-text {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 146%;
+  color: #878787;
+}
+@media (max-width: 768px) {
+  .reviews__slide-text {
+    font-size: 14px;
+  }
+}
 .reviews__slider-controls {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
   margin: 61px 0 0;
+}
+
+.step-by-step {
+  display: none;
+  margin: 98px 0 110px;
+}
+@media (max-width: 768px) {
+  .step-by-step {
+    margin: 91px 0 60px;
+  }
+}
+.step-by-step__title {
+  margin: 18px 0 22px;
+}
+@media (max-width: 768px) {
+  .step-by-step__title {
+    margin: 21px 0;
+  }
+}
+.step-by-step__wrapper {
+  display: flex;
+  gap: 84px;
+}
+.step-by-step__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  flex: 0 0 410px;
+}
+.step-by-step__controls-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 11px 29px 15px;
+  border: 1px solid rgba(98, 98, 98, 0.25);
+  border-radius: 8px 25px;
+  transition: all ease-in-out 0.1s;
+  cursor: pointer;
+}
+.step-by-step__controls-button:hover, .step-by-step__controls-button.active:hover {
+  background-color: #609eff;
+  border-color: #609eff;
+}
+.step-by-step__controls-button:active, .step-by-step__controls-button.active:active {
+  background-color: #3081ff;
+  border-color: #3081ff;
+}
+.step-by-step__controls-button.active {
+  border-color: white;
+  background-color: #ffffff;
+}
+.step-by-step__controls-button-number {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 146%;
+  color: #878787;
+}
+.step-by-step__controls-button-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 146%;
+  color: #4d4d4d;
+}
+.step-by-step__controls-button.active .step-by-step__controls-button-number {
+  font-weight: 700;
+  color: #2d2d2d;
+}
+.step-by-step__controls-button.active .step-by-step__controls-button-text {
+  font-weight: 500;
+  color: #4d4d4d;
+}
+.step-by-step__controls-button:hover .step-by-step__controls-button-number, .step-by-step__controls-button:hover .step-by-step__controls-button-text {
+  color: #ffffff;
+}
+.step-by-step__content {
+  flex: 1 1 auto;
 }

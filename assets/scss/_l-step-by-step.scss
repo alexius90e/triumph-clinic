@@ -1,0 +1,90 @@
+.step-by-step {
+  display: none;
+  margin: 98px 0 110px;
+
+  @include tablet {
+    margin: 91px 0 60px;
+  }
+
+  &__title {
+    margin: 18px 0 22px;
+
+    @include tablet {
+      margin: 21px 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 84px;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    flex: 0 0 410px;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      padding: 11px 29px 15px;
+      border: 1px solid rgba(98, 98, 98, 0.25);
+      border-radius: 8px 25px;
+      transition: all ease-in-out 0.1s;
+      cursor: pointer;
+
+      &:hover,
+      &.active:hover {
+        background-color: $blue;
+        border-color: $blue;
+      }
+
+      &:active,
+      &.active:active {
+        background-color: $darkblue;
+        border-color: $darkblue;
+      }
+
+      &.active {
+        border-color: rgba($color: $white, $alpha: 1);
+        background-color: $white;
+      }
+
+      &-number {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 146%;
+        color: $grey;
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 146%;
+        color: $darkgrey;
+      }
+
+      &.active &-number {
+        font-weight: 700;
+        color: $black;
+      }
+
+      &.active &-text {
+        font-weight: 500;
+        color: $darkgrey;
+      }
+
+      &:hover &-number,
+      &:hover &-text {
+        color: $white;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+}
