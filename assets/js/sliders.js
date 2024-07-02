@@ -100,3 +100,21 @@ const reviewsSwiper = new Swiper('.reviews .swiper', {
     prevEl: '.reviews .button--prev',
   },
 });
+
+const conditionsThumbsSwiper = new Swiper(".conditions__sliders-thumbs .swiper", {
+  spaceBetween: 16,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+const conditionsSwiper = new Swiper(".conditions__sliders-main .swiper", {
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".conditions__sliders .button--next",
+    prevEl: ".conditions__sliders .button--prev",
+  },
+  thumbs: {
+    swiper: conditionsThumbsSwiper,
+  },
+});

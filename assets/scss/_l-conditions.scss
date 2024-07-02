@@ -1,0 +1,224 @@
+.conditions {
+  margin: 114px 0;
+
+  @include tablet {
+    margin: 89px 0;
+  }
+
+  &__title {
+    margin: 21px auto 10px;
+  }
+
+  &__location {
+    display: flex;
+    align-items: stretch;
+    gap: 48px;
+    margin: 0 0 48px;
+
+    @include desktop {
+      gap: 24px;
+    }
+
+    @include laptop {
+      flex-direction: column;
+      margin: 0 0 30px;
+    }
+
+    &-text,
+    &-address {
+      border-radius: 40px 12px;
+
+      @include laptop {
+        border-radius: 30px 10px;
+      }
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 36px;
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 141%;
+      text-align: center;
+      color: $darkgrey;
+      background-color: $white;
+
+      @include tablet {
+        padding: 14px 18px;
+        font-size: 16px;
+      }
+    }
+
+    &-address {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 30px 32px 30px 45px;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 146%;
+      color: $white;
+      background-color: $blue;
+
+      @include laptop {
+        justify-content: center;
+      }
+
+      @include tablet {
+        padding: 18px 18px 18px 24px;
+        font-size: 21px;
+      }
+
+      &::before {
+        content: '';
+        flex: 0 0 auto;
+        height: 28px;
+        width: 22px;
+        background: url(../img/icons/location.svg) center no-repeat;
+      }
+    }
+  }
+
+  &__sliders {
+    position: relative;
+    z-index: 10;
+    margin: 48px 0;
+
+    @include tablet {
+      margin: 48px -15px 108px;
+    }
+
+    &-main {
+      & .swiper {
+        &-slide {
+          & img {
+            display: block;
+            height: 566px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 66px 22px;
+
+            @include tablet {
+              height: 380px;
+              border-radius: 40px 16px;
+            }
+          }
+        }
+      }
+    }
+
+    &-thumbs {
+      position: absolute;
+      left: 50%;
+      bottom: 32px;
+      width: 440px;
+      z-index: 100;
+      transform: translateX(-50%);
+
+      @include tablet {
+        bottom: -54px;
+        max-width: calc(100% - 30px);
+      }
+
+      & .swiper {
+        &-slide {
+          & img {
+            display: block;
+            height: 84px;
+            width: 100%;
+            box-sizing: border-box;
+            object-fit: cover;
+            border: 2px solid $white;
+            border-radius: 5px 12px;
+
+            @include tablet {
+              height: 64px;
+            }
+          }
+
+          &-thumb-active img {
+            border-color: $blue;
+          }
+        }
+      }
+    }
+
+    &-controls {
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      right: 40px;
+      z-index: 101;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(-50%);
+
+      @include tablet {
+        left: 15px;
+        right: 15px;
+      }
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 44px 60px;
+
+    @include laptop {
+      gap: 44px;
+    }
+
+    @include mobile {
+      gap: 36px;
+    }
+  }
+
+  &__advantage {
+    flex: calc(100% / 3 - 60px / 3 * 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include laptop {
+      flex: calc(100% / 2 - 44px / 2);
+    }
+
+    @include mobile {
+      flex: 1 1 100%;
+    }
+
+    &-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      width: 64px;
+      border-radius: 64px;
+      background-color: $blue;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 146%;
+      text-align: center;
+      color: $grey;
+
+      @include tablet {
+        font-size: 19px;
+      }
+    }
+  }
+}
