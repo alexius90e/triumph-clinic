@@ -498,46 +498,202 @@
 
           <div class="step-by-step__wrapper">
             <div class="step-by-step__controls">
-              <button class="step-by-step__controls-button active">
+              <button class="step-by-step__controls-button active" data-target="step1">
                 <span class="step-by-step__controls-button-number">01</span>
                 <span class="step-by-step__controls-button-text">Заявка</span>
               </button>
-              <button class="step-by-step__controls-button">
+              <button class="step-by-step__controls-button" data-target="step2">
                 <span class="step-by-step__controls-button-number">02</span>
                 <span class="step-by-step__controls-button-text">Прибытие в центр</span>
               </button>
-              <button class="step-by-step__controls-button">
+              <button class="step-by-step__controls-button" data-target="step3">
                 <span class="step-by-step__controls-button-number">03</span>
                 <span class="step-by-step__controls-button-text">Детокс</span>
               </button>
-              <button class="step-by-step__controls-button">
+              <button class="step-by-step__controls-button" data-target="step4">
                 <span class="step-by-step__controls-button-number">04</span>
                 <span class="step-by-step__controls-button-text">Подписание договора</span>
               </button>
-              <button class="step-by-step__controls-button">
+              <button class="step-by-step__controls-button" data-target="step5">
                 <span class="step-by-step__controls-button-number">05</span>
                 <span class="step-by-step__controls-button-text">Реабилитация</span>
               </button>
-              <button class="step-by-step__controls-button">
+              <button class="step-by-step__controls-button" data-target="step6">
                 <span class="step-by-step__controls-button-number">06</span>
                 <span class="step-by-step__controls-button-text">Подготовка к выпуску</span>
               </button>
-              <button class="step-by-step__controls-button">
+              <button class="step-by-step__controls-button" data-target="step7">
                 <span class="step-by-step__controls-button-number">07</span>
                 <span class="step-by-step__controls-button-text">Социальная адаптация</span>
               </button>
             </div>
 
             <div class="step-by-step__content">
-              <div class="step-by-step__card">
-                <h4 class="step-by-step__card-title">
-                  Вы оставляете заявку на нашем сайте или по телефону 8 (800) 101-21-27
-                </h4>
-                <div>
+              <div class="step-by-step__card active" id="step1">
+                <div class="step-by-step__card-title">
+                  Вы оставляете заявку на нашем сайте или по телефону <br />
+                  8 (800) 101-21-27
+                </div>
+                <div class="step-by-step__card-text">
                   Наш специалист выслушает вас, ответит на все вопросы, расскажет о программах
                   реабилитации и назначит дату прибытия в центр
                 </div>
-                <div>
+                <div class="step-by-step__card-buttons">
+                  <button class="button button--lg button--dark">Оставить заявку</button>
+                </div>
+              </div>
+
+              <div class="step-by-step__card" id="step2">
+                <div class="step-by-step__card-title">
+                  Организуем трансфер от дома до центра бесплатно
+                </div>
+                <div class="step-by-step__card-text">
+                  Если у вас нет возможности приехать самостоятельно или зависимый в тяжелом
+                  состоянии, то самостоятельно заберем его и привезем на реабилитацию
+                </div>
+                <div class="step-by-step__card-buttons">
+                  <button class="button button--lg button--dark">Оставить заявку</button>
+                </div>
+              </div>
+
+              <div class="step-by-step__card" id="step3">
+                <div class="step-by-step__card-title">
+                  Приведем подопечного в чувство для последующего лечения (1-2 дня)
+                </div>
+                <div class="step-by-step__card-text">
+                  Под наблюдением врачей безопасными способами выведем яды из организма, чтобы
+                  облегчить состояние
+                </div>
+                <div class="step-by-step__card-buttons">
+                  <button class="button button--lg button--dark">Оставить заявку</button>
+                </div>
+              </div>
+
+              <div class="step-by-step__card" id="step4">
+                <div class="step-by-step__card-title">
+                  Даем подписать документы только в осознанном состоянии
+                </div>
+                <div class="step-by-step__card-text">
+                  Ни один подопечный не находится в центре по принуждению, все проходит только с его
+                  согласия и подтверждения этого в договорах
+                </div>
+                <div class="step-by-step__card-buttons">
+                  <button class="button button--lg button--dark">Оставить заявку</button>
+                </div>
+              </div>
+
+              <div class="step-by-step__card step-by-step__card--wide" id="step5">
+                <div class="step-by-step__card-title">
+                  Проводим полную перезагрузку жизни, учим жить без зависимостей
+                </div>
+                <div class="step-by-step__card-text">
+                  Это ключевой этап выздоровления. Следуя передовой методике 12 шагов, психологи и
+                  кураторы проведут глубинную терапию для устранения психологической тяги и
+                  изменения моделей поведения. Групповые и индивидуальные занятия, тренинги помогут
+                  пережить перезагрузку
+                </div>
+                <div class="step-by-step__card-list">
+                  <div class="step-by-step__card-list-item">
+                    <figure class="step-by-step__card-list-item-figure">
+                      <img
+                        class="step-by-step__card-list-item-figure-image"
+                        src="./assets/img/icons/group.svg"
+                        alt="group"
+                      />
+                    </figure>
+                    <div class="step-by-step__card-list-item-text">Групповая терапия</div>
+                  </div>
+
+                  <div class="step-by-step__card-list-item">
+                    <figure class="step-by-step__card-list-item-figure">
+                      <img
+                        class="step-by-step__card-list-item-figure-image"
+                        src="./assets/img/icons/mental-care.svg"
+                        alt="mental-care"
+                      />
+                    </figure>
+                    <div class="step-by-step__card-list-item-text">
+                      Индивидуальные сессии с психологом
+                    </div>
+                  </div>
+
+                  <div class="step-by-step__card-list-item">
+                    <figure class="step-by-step__card-list-item-figure">
+                      <img
+                        class="step-by-step__card-list-item-figure-image"
+                        src="./assets/img/icons/idea.svg"
+                        alt="idea"
+                      />
+                    </figure>
+                    <div class="step-by-step__card-list-item-text">Курирующий специалист</div>
+                  </div>
+
+                  <div class="step-by-step__card-list-item">
+                    <figure class="step-by-step__card-list-item-figure">
+                      <img
+                        class="step-by-step__card-list-item-figure-image"
+                        src="./assets/img/icons/presentation.svg"
+                        alt="presentation"
+                      />
+                    </figure>
+                    <div class="step-by-step__card-list-item-text">Треннинги и ролевые игры</div>
+                  </div>
+
+                  <div class="step-by-step__card-list-item">
+                    <figure class="step-by-step__card-list-item-figure">
+                      <img
+                        class="step-by-step__card-list-item-figure-image"
+                        src="./assets/img/icons/weightlifting.svg"
+                        alt="weightlifting"
+                      />
+                    </figure>
+                    <div class="step-by-step__card-list-item-text">
+                      Физические нагрузки, арт-терапия, прогулки
+                    </div>
+                  </div>
+
+                  <div class="step-by-step__card-list-item">
+                    <figure class="step-by-step__card-list-item-figure">
+                      <img
+                        class="step-by-step__card-list-item-figure-image"
+                        src="./assets/img/icons/meditation.svg"
+                        alt="meditation"
+                      />
+                    </figure>
+                    <div class="step-by-step__card-list-item-text">Дховные лекции, беседы</div>
+                  </div>
+                </div>
+                <div class="step-by-step__card-buttons">
+                  <button class="button button--lg button--dark">Оставить заявку</button>
+                </div>
+              </div>
+
+              <div class="step-by-step__card" id="step6">
+                <div class="step-by-step__card-title">
+                  Даем инструментарий для успешной жизни после выхода из центра
+                </div>
+                <div class="step-by-step__card-text">
+                  На финальной стадии проведем тренинги по восстановлению социальных навыков,
+                  налаживанию новых связей. Сформируем новые сценарии, при которых не будет тяги
+                  вернуться к веществам и алкоголю. Каждый выпускник получит сертификат, который
+                  будет напоминать о пройденном пути
+                </div>
+                <div class="step-by-step__card-buttons">
+                  <button class="button button--lg button--dark">Оставить заявку</button>
+                </div>
+              </div>
+
+              <div class="step-by-step__card" id="step7">
+                <div class="step-by-step__card-title">
+                  Будем на связи и поддержим в сложных ситуациях после выпуска
+                </div>
+                <div class="step-by-step__card-text">
+                  Покидая стены центра, реабилитант не останется один на один с проблемами. Мы будем
+                  содействовать поиску работы/учебы, жилья, налаживанию новых связей. Группы
+                  поддержки, волонтерство в центре и возможность обратиться к кураторам обеспечат
+                  плавную адаптацию
+                </div>
+                <div class="step-by-step__card-buttons">
                   <button class="button button--lg button--dark">Оставить заявку</button>
                 </div>
               </div>

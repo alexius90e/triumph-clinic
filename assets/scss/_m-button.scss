@@ -70,10 +70,12 @@
     &:hover {
       color: $blue;
       background-color: $white;
+      border-color: $blue;
     }
 
     &:active {
       color: $darkblue;
+      border-color: $darkblue;
     }
 
     &::before {

@@ -315,9 +315,11 @@ h3 {
 .button--dark:hover {
   color: #609eff;
   background-color: #ffffff;
+  border-color: #609eff;
 }
 .button--dark:active {
   color: #3081ff;
+  border-color: #3081ff;
 }
 .button--dark::before {
   filter: brightness(10);
@@ -1026,7 +1028,6 @@ h3 {
 }
 
 .step-by-step {
-  display: none;
   margin: 98px 0 110px;
 }
 @media (max-width: 768px) {
@@ -1046,11 +1047,35 @@ h3 {
   display: flex;
   gap: 84px;
 }
+@media (max-width: 1240px) {
+  .step-by-step__wrapper {
+    gap: 42px 24px;
+  }
+}
+@media (max-width: 992px) {
+  .step-by-step__wrapper {
+    flex-direction: column;
+  }
+}
 .step-by-step__controls {
   display: flex;
   flex-direction: column;
   gap: 36px;
   flex: 0 0 410px;
+}
+@media (max-width: 1240px) {
+  .step-by-step__controls {
+    flex: 0 0 360px;
+  }
+}
+@media (max-width: 992px) {
+  .step-by-step__controls {
+    flex: 0 1 auto;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 10px;
+    overflow: auto;
+  }
 }
 .step-by-step__controls-button {
   display: flex;
@@ -1062,6 +1087,12 @@ h3 {
   border-radius: 8px 25px;
   transition: all ease-in-out 0.1s;
   cursor: pointer;
+}
+@media (max-width: 992px) {
+  .step-by-step__controls-button {
+    flex: 0 0 auto;
+    padding: 8px 21px;
+  }
 }
 .step-by-step__controls-button:hover, .step-by-step__controls-button.active:hover {
   background-color: #609eff;
@@ -1081,11 +1112,17 @@ h3 {
   line-height: 146%;
   color: #878787;
 }
+@media (max-width: 1240px) {
+  .step-by-step__controls-button-number {
+    font-size: 24px;
+  }
+}
 .step-by-step__controls-button-text {
   font-weight: 400;
   font-size: 24px;
   line-height: 146%;
   color: #4d4d4d;
+  font-size: 20px;
 }
 .step-by-step__controls-button.active .step-by-step__controls-button-number {
   font-weight: 700;
@@ -1100,4 +1137,103 @@ h3 {
 }
 .step-by-step__content {
   flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 56px;
+  box-sizing: border-box;
+  border-radius: 22px 88px;
+  background-color: #ffffff;
+}
+@media (max-width: 992px) {
+  .step-by-step__content {
+    padding: 21px 27px;
+    border-radius: 10px 30px;
+  }
+}
+.step-by-step__card {
+  display: none;
+  max-width: 520px;
+}
+@media (max-width: 992px) {
+  .step-by-step__card {
+    max-width: none;
+  }
+}
+.step-by-step__card--wide {
+  max-width: none;
+}
+.step-by-step__card.active {
+  display: block;
+}
+.step-by-step__card-title {
+  margin: 0 0 13px;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 141%;
+  text-align: center;
+  color: #4d4d4d;
+}
+.step-by-step__card-text {
+  margin: 0 0 32px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 146%;
+  text-align: center;
+  color: #878787;
+}
+.step-by-step__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0 0 40px;
+}
+@media (max-width: 576px) {
+  .step-by-step__card-list {
+    gap: 16px;
+  }
+}
+.step-by-step__card-list-item {
+  flex: 0 0 calc(33.3333333333% - 16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 576px) {
+  .step-by-step__card-list-item {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+.step-by-step__card-list-item-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 48px;
+  background-color: #609eff;
+}
+.step-by-step__card-list-item-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 24px;
+  height: auto;
+}
+.step-by-step__card-list-item-text {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 127%;
+  text-align: center;
+  color: #878787;
+}
+@media (max-width: 576px) {
+  .step-by-step__card-list-item-text {
+    font-size: 13px;
+  }
+}
+.step-by-step__card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
