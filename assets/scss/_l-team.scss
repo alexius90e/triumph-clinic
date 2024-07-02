@@ -1,5 +1,6 @@
 .team {
   margin: 100px 0 90px;
+  overflow: hidden;
 
   @include tablet {
     margin: 90px 0;

@@ -2240,6 +2240,7 @@ h3 {
 
 .team {
   margin: 100px 0 90px;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .team {
