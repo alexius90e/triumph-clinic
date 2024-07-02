@@ -98,7 +98,6 @@ window.addEventListener('resize', function () {
   swiperMode();
 });
 
-
 const reviewsSwiper = new Swiper('.reviews .swiper', {
   slidesPerView: 1,
   breakpoints: {
@@ -127,20 +126,47 @@ const reviewsSwiper = new Swiper('.reviews .swiper', {
   },
 });
 
-const conditionsThumbsSwiper = new Swiper(".conditions__sliders-thumbs .swiper", {
+const conditionsThumbsSwiper = new Swiper('.conditions__sliders-thumbs .swiper', {
   spaceBetween: 16,
   slidesPerView: 3,
   freeMode: true,
   watchSlidesProgress: true,
 });
 
-const conditionsSwiper = new Swiper(".conditions__sliders-main .swiper", {
+const conditionsSwiper = new Swiper('.conditions__sliders-main .swiper', {
   spaceBetween: 20,
   navigation: {
-    nextEl: ".conditions__sliders .button--next",
-    prevEl: ".conditions__sliders .button--prev",
+    nextEl: '.conditions__sliders .button--next',
+    prevEl: '.conditions__sliders .button--prev',
   },
   thumbs: {
     swiper: conditionsThumbsSwiper,
+  },
+});
+
+const teamSwiper = new Swiper('.team .swiper', {
+  slidesPerView: 1,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 30,
+    },
+    480: {
+      slidesPerView: 1.3,
+    },
+    576: {
+      slidesPerView: 1.8,
+    },
+    768: {
+      slidesPerView: 2.5,
+    },
+    992: {
+      spaceBetween: 40,
+      slidesPerView: 3,
+    },
+  },
+  navigation: {
+    nextEl: '.team .button--next',
+    prevEl: '.team .button--prev',
   },
 });
