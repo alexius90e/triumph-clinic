@@ -1,0 +1,142 @@
+.how-it-work {
+  margin: 114px 0 110px;
+
+  @include tablet {
+    margin: 90px 0 80px;
+  }
+
+  & .container {
+    position: relative;
+  }
+
+  &__title {
+    margin: 18px 0;
+
+    @include tablet {
+      margin: 21px 0 25px;
+    }
+  }
+
+  &__schedule {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 45px 50px;
+    border-radius: 70px 22px;
+    background-color: $white;
+
+    @include desktop {
+      padding: 40px 24px;
+      gap: 24px;
+    }
+
+    @include tablet {
+      align-items: center;
+      padding: 0 0 10px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      border-radius: 0;
+      background: rgba($color: $white, $alpha: 0);
+    }
+
+    &-block {
+      flex: 0 0 calc(50% - 25px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 38px;
+
+      @include desktop {
+        flex: 0 0 calc(50% - 12px);
+        gap: 16px;
+      }
+
+      @include tablet {
+        flex: 0 0 auto;
+        flex-direction: row;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        z-index: 1;
+        left: 80px;
+        width: 1px;
+        height: 100%;
+        transform: translateX(-50%);
+        background-color: $black;
+        opacity: 0.1;
+
+        @include laptop {
+          left: 64px;
+        }
+
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
+    &-item {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      @include laptop {
+        gap: 16px;
+      }
+
+      @include tablet {
+        flex: 0 0 auto;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      &-time {
+        display: flex;
+        justify-content: center;
+        width: 160px;
+        flex: 0 0 auto;
+
+        @include laptop {
+          width: 128px;
+        }
+
+        @include tablet {
+         width: auto;
+        }
+
+        &-value {
+          width: fit-content;
+          padding: 8px 11px;
+          font-weight: 700;
+          font-size: 21px;
+          line-height: 100%;
+          text-align: center;
+          color: $white;
+          border-radius: 64px;
+          background-color: $blue;
+
+          @include laptop {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &-text {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 110%;
+        color: #616161;
+
+        @include laptop {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
