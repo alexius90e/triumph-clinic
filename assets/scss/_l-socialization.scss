@@ -1,0 +1,154 @@
+.socialization {
+  margin: 110px 0 97px;
+
+  @include tablet {
+    margin: 90px 0 90px;
+  }
+
+  & .container {
+    position: relative;
+  }
+
+  &__title {
+    margin: 18px 0 22px;
+
+    @include tablet {
+      margin: 21px 0 8px;
+    }
+  }
+
+  &__slider {
+    & .swiper {
+      overflow: visible;
+
+      @include laptop {
+        overflow: hidden;
+      }
+
+      &-wrapper {
+        position: static;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: 992.1px) {
+          gap: 40px;
+        }
+
+        @include laptop {
+          position: relative;
+          flex-wrap: nowrap;
+        }
+      }
+
+      &-slide {
+        position: static;
+        height: auto;
+
+        @media screen and (min-width: 992.1px) {
+          flex: 0 0 calc(100% / 3 - 40px / 3 * 2);
+        }
+
+        @include laptop {
+          position: relative;
+        }
+
+        &:nth-child(-n + 2) {
+          @media screen and (min-width: 992.1px) {
+            flex: 0 0 calc(100% / 2 - 40px / 2);
+          }
+        }
+      }
+    }
+  }
+
+  &__slide {
+    height: 100%;
+    padding: 24px 36px 34px;
+    box-sizing: border-box;
+    border-radius: 22px 40px;
+    background-color: $white;
+
+    @include desktop {
+      padding: 24px 20px 36px;
+    }
+
+    @include laptop {
+      padding: 24px 14px 36px;
+    }
+
+    &-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      width: 64px;
+      margin: 0 0 18px;
+      border-radius: 64px;
+      background-color: $blue;
+
+      @include laptop {
+        margin: 0 auto 18px;
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-count {
+      margin: 0 0 6px;
+      font-weight: 700;
+      font-size: 59px;
+      line-height: 127%;
+      letter-spacing: 0.05em;
+      color: $white;
+      -webkit-text-stroke: 1px $blue;
+
+      @include laptop {
+        text-align: center;
+      }
+
+      @include mobile {
+        font-size: 50px;
+      }
+    }
+
+    &-title {
+      margin: 0 0 9px;
+
+      @include laptop {
+        text-align: center;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 146%;
+      color: $grey;
+
+      & > b {
+        font-weight: 600;
+      }
+
+      @include laptop {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__slider-controls {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 35px 0 0;
+
+    @include laptop {
+      display: flex;
+    }
+  }
+}
