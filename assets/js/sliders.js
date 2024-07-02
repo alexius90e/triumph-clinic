@@ -1,4 +1,5 @@
 let factsSwiper = null;
+let whyProgramSwiper = null;
 
 let init = false;
 
@@ -31,9 +32,34 @@ function swiperMode() {
           prevEl: '.facts .button--prev',
         },
       });
+
+      whyProgramSwiper = new Swiper('.why-program .swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+          },
+          480: {
+            slidesPerView: 1.4,
+          },
+          576: {
+            slidesPerView: 2,
+          },
+          700: {
+            slidesPerView: 2.4,
+          },
+        },
+        navigation: {
+          nextEl: '.why-program .button--next',
+          prevEl: '.why-program .button--prev',
+        },
+      });
     }
   } else {
     if (factsSwiper !== null) factsSwiper.destroy();
+    if (whyProgramSwiper !== null) whyProgramSwiper.destroy();
     init = false;
   }
 }
