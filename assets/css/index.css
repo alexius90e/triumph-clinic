@@ -366,6 +366,20 @@ h3 {
   color: #dcdcdc;
   border-color: white;
 }
+.button--order--white {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #4d4d4d;
+}
+.button--order--white:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #609eff;
+}
+.button--order--white:active {
+  border-color: #ffffff;
+  background-color: #3081ff;
+}
 .button--prev, .button--next {
   height: 60px;
   width: 60px;
@@ -494,6 +508,7 @@ h3 {
   align-items: center;
   gap: 36px;
   padding: 0 30px 0 35px;
+  transition: transform ease-in-out 0.2s;
 }
 @media (max-width: 1240px) {
   .header__nav {
@@ -505,7 +520,21 @@ h3 {
 }
 @media (max-width: 992px) {
   .header__nav {
-    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 7px 7px 44px;
+    border-radius: 40px 7px;
+    background-color: #609eff;
+    transform: translateX(-200%);
+  }
+}
+@media (max-width: 992px) {
+  .header__nav.active {
+    transform: translateX(0);
   }
 }
 .header__nav-link {
@@ -515,6 +544,54 @@ h3 {
 @media (max-width: 1240px) {
   .header__nav-link {
     font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .header__nav-link {
+    display: block;
+    width: 100%;
+    padding: 23px;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+@media (max-width: 992px) {
+  .header__nav-link:hover {
+    color: #ffffff;
+    opacity: 0.8;
+  }
+}
+@media (max-width: 992px) {
+  .header__nav-link:active {
+    color: #ffffff;
+    opacity: 0.6;
+  }
+}
+.header__nav-phone {
+  display: none;
+}
+@media (max-width: 992px) {
+  .header__nav-phone {
+    display: inline-block;
+    margin: 36px 0;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+.header__nav .button {
+  display: none;
+}
+@media (max-width: 992px) {
+  .header__nav .button {
+    display: inline-block;
   }
 }
 .header__social {
@@ -553,6 +630,7 @@ h3 {
   border-radius: 30px;
   background: url(../img/icons/burger.svg) center no-repeat;
   background-color: #609eff;
+  background-size: 14px;
   transition: all ease-in-out 0.1s;
   cursor: pointer;
 }
@@ -564,6 +642,9 @@ h3 {
 }
 .header__burger:active {
   background-color: #3081ff;
+}
+.header__burger.active {
+  background-image: url(../img/icons/close.svg);
 }
 
 .footer {

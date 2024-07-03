@@ -112,6 +112,23 @@
       color: #dcdcdc;
       border-color: rgba($color: $white, $alpha: 1.0);
     }
+
+    &--white {
+      background-color: $white;
+      border-color: $white;
+      color: $darkgrey;
+
+      &:hover {
+        color: $white;
+        border-color: $white;
+        background-color: $blue;
+      }
+  
+      &:active {
+        border-color: $white;
+        background-color: $darkblue;
+      }
+    }
   }
 
   &--prev,

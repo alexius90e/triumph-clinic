@@ -21,6 +21,7 @@
     align-items: center;
     gap: 36px;
     padding: 0 30px 0 35px;
+    transition: transform ease-in-out 0.2s;
 
     @include desktop {
       flex: 1 1 auto;
@@ -30,7 +31,22 @@
     }
 
     @include laptop {
-      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      padding: 7px 7px 44px;
+      border-radius: 40px 7px;
+      background-color: $blue;
+      transform: translateX(-200%);
+    }
+
+    &.active {
+      @include laptop {
+        transform: translateX(0);
+      }
     }
 
     &-link {
@@ -39,6 +55,55 @@
 
       @include desktop {
         font-size: 14px;
+      }
+
+      @include laptop {
+        display: block;
+        width: 100%;
+        padding: 23px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 130%;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: $white;
+        border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
+      }
+
+      &:hover {
+        @include laptop {
+          color: $white;
+          opacity: 0.8;
+        }
+      }
+
+      &:active {
+        @include laptop {
+          color: $white;
+          opacity: 0.6;
+        }
+      }
+    }
+
+    &-phone {
+      display: none;
+
+      @include laptop {
+        display: inline-block;
+        margin: 36px 0;
+        font-weight: 700;
+        font-size: 28px;
+        text-align: center;
+        color: $white;
+      }
+    }
+
+    & .button {
+      display: none;
+
+      @include laptop {
+        display: inline-block;
       }
     }
   }
@@ -81,6 +146,7 @@
     border-radius: 30px;
     background: url(../img/icons/burger.svg) center no-repeat;
     background-color: $blue;
+    background-size: 14px;
     transition: all ease-in-out 0.1s;
     cursor: pointer;
 
@@ -91,6 +157,10 @@
 
     &:active {
       background-color: $darkblue;
+    }
+
+    &.active {
+      background-image: url(../img/icons/close.svg);
     }
   }
 }
