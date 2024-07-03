@@ -1,2 +1,144 @@
 .footer {
+  margin-top: -106px;
+  background-color: $black;
+
+  @include laptop {
+    margin-top: -54px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 36px;
+    padding: 203px 0 27px;
+
+    @include desktop {
+      justify-content: center;
+    }
+
+    @include laptop {
+      display: none;
+    }
+
+    &-link {
+      font-weight: 400;
+      font-size: 15px;
+      text-align: center;
+      color: rgba($color: $white, $alpha: 0.8);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 29px 0 60px;
+    border-top: 1px solid rgba($color: $white, $alpha: 0.1);
+
+    @include laptop {
+      flex-direction: column;
+      gap: 32px;
+      padding: 110px 0 30px;
+      border: none;
+    }
+  }
+
+  & .logo {
+    order: 0;
+
+    &__link {
+      @include laptop {
+        flex-direction: column;
+      }
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    order: 1;
+    min-height: 32px;
+    padding-left: 50px;
+    background: url(../img/icons/location-circle.svg) center left no-repeat;
+
+    @include laptop {
+      align-items: center;
+      padding: 50px 0 0;
+      background: url(../img/icons/location-circle.svg) center top no-repeat;
+    }
+
+    &-address {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 130%;
+      color: $lightgrey;
+    }
+
+    &-worktime {
+      font-weight: 300;
+      font-size: 11px;
+      color: $greybg;
+    }
+  }
+
+  &__social {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    order: 2;
+
+    @include laptop {
+      order: 3;
+    }
+  }
+
+  &__phone {
+    flex: 0 0 auto;
+    order: 3;
+
+    @include laptop {
+      order: 2;
+    }
+
+    &-link {
+      font-weight: 600;
+      font-size: 24px;
+      color: $white;
+    }
+  }
+
+  &__buttons {
+    flex: 0 0 auto;
+    order: 4;
+  }
+
+  &__copyrights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 27px 0;
+    font-weight: 300;
+    font-size: 11px;
+    color: rgba($color: $white, $alpha: 0.4);
+    border-top: 1px solid rgba($color: $white, $alpha: 0.1);
+
+    @include laptop {
+      flex-direction: column;
+    }
+
+    & > a {
+      color: $blue;
+    }
+  }
 }

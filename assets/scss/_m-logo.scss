@@ -46,6 +46,8 @@
       }
     }
 
+    
+
     &-slogan {
       font-weight: 400;
       font-size: 9px;
@@ -58,5 +60,9 @@
         font-size: 7px;
       }
     }
+  }
+
+  &--light &__text-name, &--light &__text-slogan {
+    color: $white;
   }
 }

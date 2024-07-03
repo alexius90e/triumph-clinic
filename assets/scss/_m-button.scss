@@ -107,6 +107,11 @@
       border-color: $darkblue;
       background-color: $darkblue;
     }
+
+    &--light {
+      color: #dcdcdc;
+      border-color: rgba($color: $white, $alpha: 1.0);
+    }
   }
 
   &--prev,

@@ -29,6 +29,24 @@
     }
   }
 
+  &--youtube {
+    background-image: url(../img/icons/whatsapp.svg);
+    background-color: #ff0000;
+
+    &:active {
+      background-color: #da0000;
+    }
+  }
+
+  &--vk {
+    background-image: url(../img/icons/telegram.svg);
+    background-color: #0077ff;
+
+    &:active {
+      background-color: #0067dd;
+    }
+  }
+
   &--phone {
     width: auto;
     height: auto;
@@ -46,7 +64,7 @@
       height: 23px;
       width: 23px;
     }
-
+    
     &:active {
       @include laptop {
         background-color: $darkblue;
