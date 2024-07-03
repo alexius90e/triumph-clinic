@@ -52,6 +52,7 @@
     &-link {
       font-weight: 400;
       font-size: 15px;
+      color: $grey;
 
       @include desktop {
         font-size: 14px;

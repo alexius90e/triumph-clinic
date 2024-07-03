@@ -543,6 +543,7 @@ h3 {
 .header__nav-link {
   font-weight: 400;
   font-size: 15px;
+  color: #878787;
 }
 @media (max-width: 1240px) {
   .header__nav-link {
