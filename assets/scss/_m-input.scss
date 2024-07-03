@@ -17,6 +17,10 @@
     line-height: 140%;
   }
 
+  &:focus {
+    background-color: $blue;
+  } 
+
   &::placeholder {
     color: $white;
   }

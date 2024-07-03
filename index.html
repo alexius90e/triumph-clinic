@@ -34,7 +34,9 @@
 
           <a class="header__nav-phone" href="tel:88001012127">8 (800) 101-21-27</a>
 
-          <button class="button button--order button--order--white">Заказать звонок</button>
+          <button class="button button--order button--order--white button--callback">
+            Заказать звонок
+          </button>
         </nav>
 
         <div class="header__social">
@@ -46,7 +48,7 @@
         </div>
 
         <div class="header__buttons">
-          <button class="button button--order">Заказать звонок</button>
+          <button class="button button--order button--callback">Заказать звонок</button>
 
           <button class="header__burger"></button>
         </div>
@@ -101,7 +103,7 @@
             </div>
 
             <div class="first-screen__buttons">
-              <button class="button button--lg button--lg--consult button--light">
+              <button class="button button--lg button--lg--consult button--light button--callback">
                 Получить консультацию
               </button>
               <button class="button button--lg button--lg--coin button--dark">
@@ -512,14 +514,20 @@
                 name="name"
                 type="text"
                 placeholder="Введите ваше имя"
+                autocomplete="off"
+                required
               />
               <input
                 class="input input--phone"
                 name="phone"
-                type="text"
+                type="tel"
                 placeholder="Введите ваш телефон"
+                autocomplete="off"
+                required
               />
-              <button class="button button--lg button--light">Получить помощь</button>
+              <button class="button button--lg button--light">
+                Получить помощь
+              </button>
             </form>
 
             <div class="callback__disclaimer">
@@ -582,7 +590,9 @@
                   реабилитации и назначит дату прибытия в центр
                 </div>
                 <div class="step-by-step__card-buttons">
-                  <button class="button button--lg button--dark">Оставить заявку</button>
+                  <button class="button button--lg button--dark button--callback">
+                    Оставить заявку
+                  </button>
                 </div>
               </div>
 
@@ -595,7 +605,9 @@
                   состоянии, то самостоятельно заберем его и привезем на реабилитацию
                 </div>
                 <div class="step-by-step__card-buttons">
-                  <button class="button button--lg button--dark">Оставить заявку</button>
+                  <button class="button button--lg button--dark button--callback">
+                    Оставить заявку
+                  </button>
                 </div>
               </div>
 
@@ -608,7 +620,9 @@
                   облегчить состояние
                 </div>
                 <div class="step-by-step__card-buttons">
-                  <button class="button button--lg button--dark">Оставить заявку</button>
+                  <button class="button button--lg button--dark button--callback">
+                    Оставить заявку
+                  </button>
                 </div>
               </div>
 
@@ -621,7 +635,9 @@
                   согласия и подтверждения этого в договорах
                 </div>
                 <div class="step-by-step__card-buttons">
-                  <button class="button button--lg button--dark">Оставить заявку</button>
+                  <button class="button button--lg button--dark button--callback">
+                    Оставить заявку
+                  </button>
                 </div>
               </div>
 
@@ -707,7 +723,9 @@
                   </div>
                 </div>
                 <div class="step-by-step__card-buttons">
-                  <button class="button button--lg button--dark">Оставить заявку</button>
+                  <button class="button button--lg button--dark button--callback">
+                    Оставить заявку
+                  </button>
                 </div>
               </div>
 
@@ -722,7 +740,9 @@
                   будет напоминать о пройденном пути
                 </div>
                 <div class="step-by-step__card-buttons">
-                  <button class="button button--lg button--dark">Оставить заявку</button>
+                  <button class="button button--lg button--dark button--callback">
+                    Оставить заявку
+                  </button>
                 </div>
               </div>
 
@@ -737,7 +757,9 @@
                   плавную адаптацию
                 </div>
                 <div class="step-by-step__card-buttons">
-                  <button class="button button--lg button--dark">Оставить заявку</button>
+                  <button class="button button--lg button--dark button--callback">
+                    Оставить заявку
+                  </button>
                 </div>
               </div>
             </div>
@@ -1368,7 +1390,9 @@
               <div class="price__list-item-description">Для получения стабильного результата</div>
               <div class="price__list-item-price">от 25 000 ₽</div>
               <div class="price__list-item-buttons">
-                <button class="button button--lg button--light">Оставить заявку</button>
+                <button class="button button--lg button--light button--callback">
+                  Оставить заявку
+                </button>
               </div>
             </div>
 
@@ -1381,7 +1405,9 @@
               </div>
               <div class="price__list-item-price">от 35 000 ₽</div>
               <div class="price__list-item-buttons">
-                <button class="button button--lg button--dark">Оставить заявку</button>
+                <button class="button button--lg button--dark button--callback">
+                  Оставить заявку
+                </button>
               </div>
             </div>
 
@@ -1394,7 +1420,9 @@
               </div>
               <div class="price__list-item-price">от 45 000 ₽</div>
               <div class="price__list-item-buttons">
-                <button class="button button--lg button--dark">Оставить заявку</button>
+                <button class="button button--lg button--dark button--callback">
+                  Оставить заявку
+                </button>
               </div>
             </div>
 
@@ -1407,7 +1435,9 @@
               </div>
               <div class="price__list-item-price">от 15 000 ₽</div>
               <div class="price__list-item-buttons">
-                <button class="button button--lg button--dark">Оставить заявку</button>
+                <button class="button button--lg button--dark button--callback">
+                  Оставить заявку
+                </button>
               </div>
             </div>
           </div>
@@ -1881,14 +1911,20 @@
                 name="name"
                 type="text"
                 placeholder="Введите ваше имя"
+                autocomplete="off"
+                required
               />
               <input
                 class="input input--phone"
-                name="phone"
+                name="tel"
                 type="text"
                 placeholder="Введите ваш телефон"
+                autocomplete="off"
+                required
               />
-              <button class="button button--lg button--light">Получить помощь</button>
+              <button class="button button--lg button--light">
+                Получить помощь
+              </button>
             </form>
 
             <div class="callback__disclaimer">
@@ -1943,7 +1979,9 @@
           </div>
 
           <div class="footer__buttons">
-            <button class="button button--order button--order--light">Заказать звонок</button>
+            <button class="button button--order button--order--light button--callback">
+              Заказать звонок
+            </button>
           </div>
         </div>
 
@@ -1955,7 +1993,55 @@
       </div>
     </footer>
 
+    <div class="modal modal--callback">
+      <div class="modal__body">
+        <div class="modal__content">
+          <div class="modal__title">
+            <span>Перезвоним в течении 5 минут</span>
+            и ответим на все вопросы!
+          </div>
+
+          <form class="modal__form">
+            <input
+              class="input input--name"
+              name="name"
+              type="text"
+              placeholder="Введите ваше имя"
+              autocomplete="off"
+              required
+            />
+            <input
+              class="input input--phone"
+              name="phone"
+              type="tel"
+              placeholder="Введите ваш телефон"
+              autocomplete="off"
+              required
+            />
+            <button class="button button--lg button--light">
+              Получить помощь
+            </button>
+          </form>
+
+          <div class="modal__disclaimer">
+            Оставляя заявку на нашем сайте, вы соглашаетесь с политикой обработки персональных
+            данных и получение новостей компании, скидках и акциях
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--thanks">
+      <div class="modal__body">
+        <div class="modal__content modal__content--thanks">
+          <div class="modal__title modal__title--thanks">Спасибо!</div>
+          <div class="modal__description">Ожидайте звонка!</div>
+        </div>
+      </div>
+    </div>
+
     <script src="./assets/js/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/imask.js" defer></script>
     <script src="./assets/js/main.js" type="module" defer></script>
   </body>
 </html>

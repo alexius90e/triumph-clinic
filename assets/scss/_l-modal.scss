@@ -1,0 +1,130 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: $black, $alpha: 0.25);
+  backdrop-filter: blur(10px);
+
+  &.active {
+    display: flex;
+  }
+
+  &__body {
+    position: relative;
+    max-width: calc(100% - 30px);
+    width: 550px;
+    padding: 40px 60px;
+    box-sizing: border-box;
+    border-radius: 60px 10px;
+    background-color: $blue;
+
+    @include tablet {
+      padding: 24px 20px;
+      box-sizing: border-box;
+      border-radius: 30px 8px;
+      background-color: $blue;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -26px;
+      right: -26px;
+      z-index: 1001;
+      display: block;
+      width: 28px;
+      height: 28px;
+      background: url(../img/icons/close.svg) center no-repeat;
+      cursor: pointer;
+
+      @include tablet {
+        top: -34px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__content {
+    overflow: auto;
+
+    &--thanks {
+      padding-top: 164px;
+      background: url(../img/icons/thanks.svg) center top no-repeat;
+    }
+  }
+
+  &__title {
+    margin: 0 0 25px;
+    font-weight: 500;
+    font-size: 37px;
+    line-height: 122%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $white;
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    &--thanks {
+      margin: 0 0 8px;
+      font-weight: 700;
+      font-size: 56px;
+
+      @include tablet {
+        font-size: 42px;
+      }
+    }
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 122%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $white;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @include tablet {
+      gap: 12px;
+    }
+
+    & > * {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &__disclaimer {
+    margin: 27px 0 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 138%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: rgba($color: $white, $alpha: 0.5);
+
+    @include tablet {
+      font-size: 10px;
+    }
+  }
+}
