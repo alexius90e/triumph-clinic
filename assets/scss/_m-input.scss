@@ -1,0 +1,43 @@
+.input {
+  display: block;
+  padding: 27px 24px 25px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 60px;
+  background-color: $blue;
+  outline-color: rgba($color: $white, $alpha: 0.1);
+
+  @include tablet {
+    padding: 21px 24px 18px;
+    font-size: 17px;
+    line-height: 140%;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+
+  
+
+  &--name {
+    background: url(../img/icons/accountInput.svg) center left 31px no-repeat;
+  }
+
+  &--phone {
+    background: url(../img/icons/phoneInput.svg) center left 31px no-repeat;
+  }
+
+  &--name,
+  &--phone {
+    padding-left: 80px;
+
+    @include tablet {
+      padding-left: 60px;
+      background-position: center left 20px ;
+    }
+  }
+}
