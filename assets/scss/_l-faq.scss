@@ -1,0 +1,130 @@
+.faq {
+  margin: 90px 0 100px;
+  overflow: hidden;
+
+  @include tablet {
+    margin: 90px 0 60px;
+  }
+
+  &__title {
+    margin: 18px 0 25px;
+
+    @include tablet {
+      margin: 21px 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+
+    @include tablet {
+      gap: 18px;
+    }
+  }
+
+  &__block {
+    flex: 0 0 calc(50% - 18px);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include tablet {
+      flex: 1 1 100%;
+      gap: 18px;
+    }
+  }
+
+  &__item {
+    padding: 20px 26px;
+    color: $white;
+    border-radius: 16px;
+    background-color: $white;
+
+    @include tablet {
+      padding: 28px 24px;
+      border-radius: 8px;
+    }
+
+    @include mobile {
+      padding: 24px 20px;
+    }
+
+    &-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 146%;
+      color: $black;
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+
+      &::after {
+        content: '+';
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 100%;
+        color: $white;
+        border-radius: 32px;
+        background-color: $blue;
+        transition: transform ease-in-out 0.14s;
+
+        @include tablet {
+          width: 30px;
+          height: 30px;
+          font-size: 24px;
+        }
+
+        @include mobile {
+          width: 26px;
+          height: 26px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    &.active &-question::after {
+      transform: rotate(-45deg);
+    }
+
+    &-answer {
+      display: flex;
+      flex-direction: column;
+      max-height: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 148%;
+      color: $grey;
+      transition: max-height 0.2s ease-out;
+
+      @include tablet {
+        font-size: 14px;
+      }
+
+      &::before {
+        content: '';
+        flex: 0 0 auto;
+        display: block;
+        height: 20px;
+      }
+    }
+  }
+}

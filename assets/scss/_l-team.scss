@@ -147,6 +147,11 @@
       border-radius: 8px 30px;
       background-color: $white;
 
+      @include tablet {
+        max-height: calc(100vh - 80px);
+        padding: 20px;
+      }
+
       &::before {
         content: '';
         position: absolute;
@@ -158,6 +163,13 @@
         height: 28px;
         background: url(../img/icons/close.svg) center no-repeat;
         cursor: pointer;
+
+        @include tablet {
+          top: -34px;
+          left: 50%;
+          right: auto;
+          transform: translateX(-50%);
+        }
       }
     }
 
@@ -165,6 +177,10 @@
       max-height: calc(100vh - 180px);
       padding-right: 4px;
       overflow: auto;
+
+      @include tablet {
+        max-height: calc(100vh - 120px);
+      }
 
       &::-webkit-scrollbar {
         width: 4px;
