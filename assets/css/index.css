@@ -2272,6 +2272,14 @@ h3 {
 .team__slider .swiper {
   overflow: visible;
 }
+.team__slider .swiper-slide {
+  height: auto;
+}
+.team__slide {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .team__slide-figure-image {
   display: block;
   max-width: 100%;
@@ -2298,7 +2306,7 @@ h3 {
     font-size: 19px;
   }
 }
-.team__slide-text {
+.team__slide-position {
   margin: 0 0 26px;
   font-weight: 500;
   font-size: 16px;
@@ -2306,10 +2314,32 @@ h3 {
   color: #878787;
 }
 @media (max-width: 768px) {
-  .team__slide-text {
+  .team__slide-position {
     margin-bottom: 13px;
     font-size: 14px;
   }
+}
+.team__slide-text {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 145%;
+  color: #878787;
+}
+@media (max-width: 768px) {
+  .team__slide-text {
+    font-size: 14px;
+  }
+}
+.team__slide-text > p {
+  margin: 0;
+}
+.team__slide-buttons {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-end;
 }
 .team__slide-button {
   padding: 0;
@@ -2322,6 +2352,63 @@ h3 {
   border: none;
   background: none;
   cursor: pointer;
+}
+.team__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(45, 45, 45, 0.25);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.team__modal.active {
+  display: flex;
+}
+.team__modal-body {
+  position: relative;
+  max-height: calc(100vh - 100px);
+  max-width: calc(100% - 30px);
+  width: 580px;
+  padding: 40px 32px;
+  box-sizing: border-box;
+  border-radius: 8px 30px;
+  background-color: #ffffff;
+}
+.team__modal-body::before {
+  content: "";
+  position: absolute;
+  top: -26px;
+  right: -26px;
+  z-index: 1001;
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: url(../img/icons/close.svg) center no-repeat;
+  cursor: pointer;
+}
+.team__modal-content {
+  max-height: calc(100vh - 180px);
+  padding-right: 4px;
+  overflow: auto;
+  /* Handle */
+}
+.team__modal-content::-webkit-scrollbar {
+  width: 4px;
+}
+.team__modal-content::-webkit-scrollbar-track {
+  background: rgba(45, 45, 45, 0.05);
+}
+.team__modal-content::-webkit-scrollbar-thumb {
+  background: rgba(45, 45, 45, 0.1);
+}
+.team__modal .team__slide-text {
+  display: flex;
 }
 .team__controls {
   display: flex;

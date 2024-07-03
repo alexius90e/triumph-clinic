@@ -31,10 +31,18 @@
   &__slider {
     & .swiper {
       overflow: visible;
+
+      &-slide {
+        height: auto;
+      }
     }
   }
 
   &__slide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     &-figure {
       &-image {
         display: block;
@@ -62,7 +70,7 @@
       }
     }
 
-    &-text {
+    &-position {
       margin: 0 0 26px;
       font-weight: 500;
       font-size: 16px;
@@ -73,6 +81,30 @@
         margin-bottom: 13px;
         font-size: 14px;
       }
+    }
+
+    &-text {
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 145%;
+      color: $grey;
+
+      @include tablet {
+        font-size: 14px;
+      }
+
+      & > p {
+        margin: 0;
+      }
+    }
+
+    &-buttons {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: flex-end;
     }
 
     &-button {
@@ -86,6 +118,71 @@
       background: none;
       cursor: pointer;
     }
+  }
+
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: $black, $alpha: 0.25);
+    backdrop-filter: blur(10px);
+
+    &.active {
+      display: flex;
+    }
+
+    &-body {
+      position: relative;
+      max-height: calc(100vh - 100px);
+      max-width: calc(100% - 30px);
+      width: 580px;
+      padding: 40px 32px;
+      box-sizing: border-box;
+      border-radius: 8px 30px;
+      background-color: $white;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -26px;
+        right: -26px;
+        z-index: 1001;
+        display: block;
+        width: 28px;
+        height: 28px;
+        background: url(../img/icons/close.svg) center no-repeat;
+        cursor: pointer;
+      }
+    }
+
+    &-content {
+      max-height: calc(100vh - 180px);
+      padding-right: 4px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgba($color: $black, $alpha: 0.05);
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: rgba($color: $black, $alpha: 0.1);
+      }
+    }
+  }
+
+  &__modal &__slide-text {
+    display: flex;
   }
 
   &__controls {
