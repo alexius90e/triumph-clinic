@@ -785,7 +785,7 @@ h3 {
     flex-direction: column;
   }
 }
-.footer__copyrights > a {
+.footer__copyrights a {
   color: #609eff;
 }
 
