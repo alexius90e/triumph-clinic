@@ -35,9 +35,12 @@
       top: 70px;
       left: 0;
       right: 0;
+      bottom: 0;
+      z-index: 1000;
       flex-direction: column;
       gap: 0;
       padding: 7px 7px 44px;
+      overflow: auto;
       border-radius: 40px 7px;
       background-color: $blue;
       transform: translateX(-200%);

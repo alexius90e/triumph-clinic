@@ -78,6 +78,12 @@ body {
   overflow-y: scroll;
   color: $black;
   background-color: $greybg;
+
+  &.hidden {
+    @include laptop {
+      overflow: hidden;
+    }
+  }
 }
 
 a,

@@ -55,6 +55,11 @@ body {
   color: #2d2d2d;
   background-color: #ededed;
 }
+@media (max-width: 992px) {
+  body.hidden {
+    overflow: hidden;
+  }
+}
 
 a,
 button,
@@ -277,6 +282,16 @@ h3 {
   transition: all ease-in-out 0.1s;
   cursor: pointer;
 }
+@keyframes move-light {
+  from {
+    transform: translateX(-40px) skewX(-45deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px) skewX(-45deg);
+    opacity: 0.8;
+  }
+}
 .button--lg {
   display: flex;
   align-items: center;
@@ -315,28 +330,58 @@ h3 {
   background: url(../img/icons/ruble.svg) center no-repeat;
 }
 .button--light {
+  position: relative;
+  overflow: hidden;
   color: #2d2d2d;
   background-color: #ffffff;
 }
 .button--light:hover {
   color: #609eff;
 }
+.button--light:hover::after {
+  animation: move-light 0.5s;
+}
 .button--light:active {
   color: #3081ff;
 }
+.button--light::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5em;
+  height: 100%;
+  background-color: rgba(96, 158, 255, 0.5);
+  transform: translateX(-4em) skewX(-45deg);
+}
 .button--dark {
-  background-color: #609eff;
+  position: relative;
+  overflow: hidden;
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.3);
+  background-color: #609eff;
 }
 .button--dark:hover {
   color: #609eff;
   background-color: #ffffff;
   border-color: #609eff;
 }
+.button--dark:hover::after {
+  animation: move-light 0.5s;
+}
 .button--dark:active {
   color: #3081ff;
   border-color: #3081ff;
+}
+.button--dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5em;
+  height: 100%;
+  background-color: rgba(96, 158, 255, 0.5);
+  transform: translateX(-4em) skewX(-45deg);
 }
 .button--dark::before {
   filter: brightness(10);
@@ -527,9 +572,12 @@ h3 {
     top: 70px;
     left: 0;
     right: 0;
+    bottom: 0;
+    z-index: 1000;
     flex-direction: column;
     gap: 0;
     padding: 7px 7px 44px;
+    overflow: auto;
     border-radius: 40px 7px;
     background-color: #609eff;
     transform: translateX(-200%);
@@ -1369,8 +1417,10 @@ h3 {
   justify-content: flex-start;
   gap: 20px;
   padding: 11px 29px 15px;
-  border: 1px solid rgba(98, 98, 98, 0.25);
+  color: #878787;
+  border: 1px solid #ffffff;
   border-radius: 8px 25px;
+  background-color: #ffffff;
   transition: all ease-in-out 0.1s;
   cursor: pointer;
 }
@@ -1380,17 +1430,19 @@ h3 {
     padding: 8px 21px;
   }
 }
-.step-by-step__controls-button:hover, .step-by-step__controls-button.active:hover {
+.step-by-step__controls-button:hover {
   background-color: #609eff;
   border-color: #609eff;
+  color: #ffffff;
 }
-.step-by-step__controls-button:active, .step-by-step__controls-button.active:active {
+.step-by-step__controls-button:active {
   background-color: #3081ff;
   border-color: #3081ff;
+  color: #ffffff;
 }
 .step-by-step__controls-button.active {
-  border-color: white;
-  background-color: #ffffff;
+  border-color: #609eff;
+  background-color: #609eff;
 }
 .step-by-step__controls-button-number {
   font-weight: 500;
@@ -1407,18 +1459,18 @@ h3 {
   font-weight: 400;
   font-size: 24px;
   line-height: 146%;
-  color: #4d4d4d;
+  color: #878787;
   font-size: 20px;
+}
+.step-by-step__controls-button:hover .step-by-step__controls-button-number, .step-by-step__controls-button:hover .step-by-step__controls-button-text, .step-by-step__controls-button:active .step-by-step__controls-button-number, .step-by-step__controls-button:active .step-by-step__controls-button-text {
+  color: #ffffff;
 }
 .step-by-step__controls-button.active .step-by-step__controls-button-number {
   font-weight: 700;
-  color: #2d2d2d;
+  color: #ffffff;
 }
 .step-by-step__controls-button.active .step-by-step__controls-button-text {
   font-weight: 500;
-  color: #4d4d4d;
-}
-.step-by-step__controls-button:hover .step-by-step__controls-button-number, .step-by-step__controls-button:hover .step-by-step__controls-button-text {
   color: #ffffff;
 }
 .step-by-step__content {
@@ -2787,6 +2839,7 @@ h3 {
   font-size: 21px;
   line-height: 146%;
   color: #2d2d2d;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .faq__item-question {

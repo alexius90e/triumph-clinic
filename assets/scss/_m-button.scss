@@ -5,6 +5,17 @@
   transition: all ease-in-out 0.1s;
   cursor: pointer;
 
+  @keyframes move-light {
+    from {
+      transform: translateX(-40px) skewX(-45deg);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(400px) skewX(-45deg);
+      opacity: 0.8;
+    }
+  }
+
   &--lg {
     display: flex;
     align-items: center;
@@ -50,32 +61,66 @@
   }
 
   &--light {
+    position: relative;
+    overflow: hidden;
     color: $black;
     background-color: $white;
 
     &:hover {
       color: $blue;
+
+      &::after {
+        animation: move-light 0.5s;
+      }
     }
 
     &:active {
       color: $darkblue;
     }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1.5em;
+      height: 100%;
+      background-color: rgba($color: $blue, $alpha: 0.5);
+      transform: translateX(-4em) skewX(-45deg);
+    }
   }
 
   &--dark {
-    background-color: $blue;
+    position: relative;
+    overflow: hidden;
     color: $white;
     border-color: rgba($color: $white, $alpha: 0.3);
+    background-color: $blue;
 
     &:hover {
       color: $blue;
       background-color: $white;
       border-color: $blue;
+
+      &::after {
+        animation: move-light 0.5s;
+      }
     }
 
     &:active {
       color: $darkblue;
       border-color: $darkblue;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1.5em;
+      height: 100%;
+      background-color: rgba($color: $blue, $alpha: 0.5);
+      transform: translateX(-4em) skewX(-45deg);
     }
 
     &::before {
@@ -110,7 +155,7 @@
 
     &--light {
       color: #dcdcdc;
-      border-color: rgba($color: $white, $alpha: 1.0);
+      border-color: rgba($color: $white, $alpha: 1);
     }
 
     &--white {
@@ -123,7 +168,7 @@
         border-color: $white;
         background-color: $blue;
       }
-  
+
       &:active {
         border-color: $white;
         background-color: $darkblue;

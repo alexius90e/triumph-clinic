@@ -50,8 +50,10 @@
       justify-content: flex-start;
       gap: 20px;
       padding: 11px 29px 15px;
-      border: 1px solid rgba(98, 98, 98, 0.25);
+      color: $grey;
+      border: 1px solid $white;
       border-radius: 8px 25px;
+      background-color: $white;
       transition: all ease-in-out 0.1s;
       cursor: pointer;
 
@@ -60,21 +62,21 @@
         padding: 8px 21px;
       }
 
-      &:hover,
-      &.active:hover {
+      &:hover {
         background-color: $blue;
         border-color: $blue;
+        color: $white;
       }
 
-      &:active,
-      &.active:active {
+      &:active {
         background-color: $darkblue;
         border-color: $darkblue;
+        color: $white;
       }
 
       &.active {
-        border-color: rgba($color: $white, $alpha: 1);
-        background-color: $white;
+        border-color: $blue;
+        background-color: $blue;
       }
 
       &-number {
@@ -92,23 +94,24 @@
         font-weight: 400;
         font-size: 24px;
         line-height: 146%;
-        color: $darkgrey;
-
+        color: $grey;
         font-size: 20px;
+      }
+
+      &:hover &-number,
+      &:hover &-text,
+      &:active &-number,
+      &:active &-text {
+        color: $white;
       }
 
       &.active &-number {
         font-weight: 700;
-        color: $black;
+        color: $white;
       }
 
       &.active &-text {
         font-weight: 500;
-        color: $darkgrey;
-      }
-
-      &:hover &-number,
-      &:hover &-text {
         color: $white;
       }
     }

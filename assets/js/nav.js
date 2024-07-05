@@ -5,6 +5,7 @@ if (burger && headerNav) {
   burger.addEventListener('click', () => {
     headerNav.classList.toggle('active');
     burger.classList.toggle('active');
+    document.body.classList.toggle('hidden')
   });
 
   headerNav.addEventListener('click', (event) => {
@@ -15,6 +16,7 @@ if (burger && headerNav) {
     if (isLink || isPhone || isButton) {
       headerNav.classList.remove('active');
       burger.classList.remove('active');
+      document.body.classList.remove('hidden')
     }
   });
 }
