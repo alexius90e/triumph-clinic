@@ -31,22 +31,26 @@ const CHAT_ID = '';
     const formData = new FormData(event.currentTarget);
     const name = formData.get('name');
     const phone = formData.get('phone');
-    const message = `Имя: ${name} Телефон ${phone}`;
-    sendMessage(message);
+    // const message = `Имя: ${name} Телефон ${phone}`;
+    // sendMessage(message);
     event.currentTarget.reset();
+    fetch('../../send.php', {
+      method: 'POST',
+      data: { name, phone },
+    });
     if (callbackModal) callbackModal.classList.remove('active');
     if (thanksModal) thanksModal.classList.add('active');
   });
 });
 
-function sendMessage(message) {
-  const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&parse_mode=html&text=${message}`;
+// function sendMessage(message) {
+//   const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&parse_mode=html&text=${message}`;
 
-  fetch(url)
-    .then((data) => {
-      console.log('Message sent successfully:', data);
-    })
-    .catch((error) => {
-      console.error('Error sending message:', error);
-    });
-}
+//   fetch(url)
+//     .then((data) => {
+//       console.log('Message sent successfully:', data);
+//     })
+//     .catch((error) => {
+//       console.error('Error sending message:', error);
+//     });
+// }
