@@ -45,6 +45,7 @@
     }
 
     &-content {
+      position: relative;
       height: 573px;
       margin: 0 -48px 30px;
       background-color: $grey;
@@ -60,6 +61,52 @@
         display: block;
         height: 100%;
         width: 100%;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-color: rgba($color: #000000, $alpha: 0.1);
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 11;
+        display: block;
+        width: 88px;
+        aspect-ratio: 1 / 1;
+        background: url(../img/icons/play.svg) center no-repeat;
+        background-size: cover;
+        transform: translateX(-50%) translateY(-50%);
+        transition: transform ease-in-out 0.1s;
+        cursor: pointer;
+
+        @include tablet {
+          width: 64px;
+        }
+      }
+
+      &.active::before,
+      &.active::after {
+        display: none;
+      }
+
+      &:hover::after {
+        transform: translateX(-50%) translateY(-50%) scale(1.06);
+      }
+
+      &:active::after {
+        transform: translateX(-50%) translateY(-50%) scale(0.98);
       }
     }
 

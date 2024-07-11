@@ -4,6 +4,7 @@ import './team.js';
 import './faq.js';
 import './nav.js';
 import './modals.js';
+import './reviews.js';
 
 const maskOptions = {
   mask: '+{7} (000) 000 00 00',
@@ -16,3 +17,4 @@ const phoneInputs = phoneInputClassNames
   .reduce((acc, array) => [...acc, ...array], []);
 
 phoneInputs.forEach((inputElement) => IMask(inputElement, maskOptions));
+
