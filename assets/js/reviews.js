@@ -3,7 +3,10 @@ const whyProgramVideoContent = document.querySelector('.why-program__video-conte
 
 reviewsSlideVideos.forEach((videoEl) => {
   videoEl.addEventListener('click', (event) => {
-    if (whyProgramVideoContent) whyProgramVideoContent.classList.remove('active');
+    if (whyProgramVideoContent) {
+      whyProgramVideoContent.classList.remove('active');
+      whyProgramVideoContent.innerHTML = '';
+    }
     reviewsSlideVideos.forEach((video) => {
       if (video === event.currentTarget) {
         video.classList.add('active');
@@ -30,6 +33,20 @@ reviewsSlideVideos.forEach((videoEl) => {
 if (whyProgramVideoContent) {
   whyProgramVideoContent.addEventListener('click', (event) => {
     event.currentTarget.classList.add('active');
-    reviewsSlideVideos.forEach((video) => video.classList.remove('active'));
+    event.currentTarget.innerHTML = `
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/XIMLoLxmTDw?si=wFzm5etjCkaNdMl5"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        `;
+    reviewsSlideVideos.forEach((video) => {
+      video.classList.remove('active');
+    });
   });
 }

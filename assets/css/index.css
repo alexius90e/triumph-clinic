@@ -1770,6 +1770,7 @@ h3 {
   position: relative;
   height: 573px;
   margin: 0 -48px 30px;
+  background: url(../img/videocontent-bg.jpg) center no-repeat;
   background-color: #878787;
 }
 @media (max-width: 992px) {
@@ -1794,8 +1795,8 @@ h3 {
   bottom: 0;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   cursor: pointer;
 }
 .why-program__video-content::after {
