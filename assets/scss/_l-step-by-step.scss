@@ -156,6 +156,10 @@
       line-height: 141%;
       text-align: center;
       color: $darkgrey;
+
+      & a {
+        color: $darkgrey;
+      }
     }
 
     &-text {

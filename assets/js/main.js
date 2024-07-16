@@ -18,3 +18,14 @@ const phoneInputs = phoneInputClassNames
 
 phoneInputs.forEach((inputElement) => IMask(inputElement, maskOptions));
 
+const goTopButton = document.querySelector('.go-top__button');
+
+document.addEventListener('scroll', () => {
+  const scrollYPosition = window.scrollY;
+
+  if (scrollYPosition >= 800) {
+    if (goTopButton) goTopButton.classList.add('active');
+  } else {
+    if (goTopButton) goTopButton.classList.remove('active');
+  }
+});

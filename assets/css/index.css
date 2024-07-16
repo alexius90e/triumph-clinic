@@ -1555,6 +1555,9 @@ h3 {
   text-align: center;
   color: #4d4d4d;
 }
+.step-by-step__card-title a {
+  color: #4d4d4d;
+}
 .step-by-step__card-text {
   margin: 0 0 32px;
   font-weight: 400;
@@ -3203,4 +3206,35 @@ h3 {
   .modal__disclaimer {
     font-size: 10px;
   }
+}
+
+.go-top__button {
+  position: fixed;
+  left: auto;
+  right: 15px;
+  bottom: 40px;
+  z-index: 0;
+  display: block;
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  background: url(../img/icons/prev.svg) center no-repeat;
+  background-color: #609eff;
+  box-shadow: 0 0 10px rgba(45, 45, 45, 0.2);
+  transform: rotate(90deg);
+  opacity: 0;
+  transition: opacity ease-in-out 0.15s, background-color ease-in-out 0.1s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .go-top__button {
+    display: none;
+  }
+}
+.go-top__button:active {
+  background-color: #3081ff;
+}
+.go-top__button.active {
+  z-index: 100;
+  opacity: 1;
 }
